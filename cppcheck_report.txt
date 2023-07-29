@@ -1,0 +1,137 @@
+drivers/template/driver.c:21:10: error: There is an unknown macro here somewhere. Configuration is required. If TO_FUNCTION is a macro then please configure it. [unknownMacro]
+Return_t TO_FUNCTION(DEVICE_NAME, _self_register)(void) {
+         ^
+src/device.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/types.h:66:0: information: Skipping configuration 'CONFIG_DEVICE_NAME_BYTES' since the value of 'CONFIG_DEVICE_NAME_BYTES' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    Byte_t name[CONFIG_DEVICE_NAME_BYTES];
+^
+src/device.c:72:0: information: Skipping configuration 'CONFIG_DEVICE_NAME_BYTES' since the value of 'CONFIG_DEVICE_NAME_BYTES' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+              if(OK(__memcpy__(device->name, name_, CONFIG_DEVICE_NAME_BYTES))) {
+^
+src/mem.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/mem.c:231:14: style: The scope of the variable 'used' can be reduced. [variableScope]
+  HalfWord_t used = zero;
+             ^
+src/mem.c:560:14: style: The scope of the variable 'requested' can be reduced. [variableScope]
+  HalfWord_t requested = zero;
+             ^
+src/mem.c:561:14: style: The scope of the variable 'free' can be reduced. [variableScope]
+  HalfWord_t free = zero;
+             ^
+src/mem.c:566:14: style: The scope of the variable 'fewest' can be reduced. [variableScope]
+  HalfWord_t fewest = -1;
+             ^
+src/mem.c:870:10: style: The scope of the variable 'i' can be reduced. [variableScope]
+  Size_t i = zero;
+         ^
+src/mem.c:896:10: style: The scope of the variable 'i' can be reduced. [variableScope]
+  Size_t i = zero;
+         ^
+src/mem.c:920:10: style: The scope of the variable 'i' can be reduced. [variableScope]
+  Size_t i = zero;
+         ^
+src/mem.c:560:24: style: Variable 'requested' is assigned a value that is never used. [unreadVariable]
+  HalfWord_t requested = zero;
+                       ^
+src/mem.c:870:12: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+  Size_t i = zero;
+           ^
+src/mem.c:896:12: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+  Size_t i = zero;
+           ^
+src/mem.c:920:12: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+  Size_t i = zero;
+           ^
+src/port.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/queue.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/queue.c:80:10: style: The scope of the variable 'messages' can be reduced. [variableScope]
+  Base_t messages = zero;
+         ^
+src/queue.c:118:10: style: The scope of the variable 'messages' can be reduced. [variableScope]
+  Base_t messages = zero;
+         ^
+src/queue.c:162:10: style: The scope of the variable 'messages' can be reduced. [variableScope]
+  Base_t messages = zero;
+         ^
+src/queue.c:207:10: style: The scope of the variable 'messages' can be reduced. [variableScope]
+  Base_t messages = zero;
+         ^
+src/queue.c:253:10: style: The scope of the variable 'messages' can be reduced. [variableScope]
+  Base_t messages = zero;
+         ^
+src/stream.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/sys.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 63 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/task.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/task.c:206:10: style: The scope of the variable 'task' can be reduced. [variableScope]
+  Base_t task = zero;
+         ^
+src/task.c:207:10: style: The scope of the variable 'tasks' can be reduced. [variableScope]
+  Base_t tasks = zero;
+         ^
+src/task.c:283:10: style: The scope of the variable 'tasks' can be reduced. [variableScope]
+  Base_t tasks = zero;
+         ^
+src/task.c:350:10: style: The scope of the variable 'task' can be reduced. [variableScope]
+  Base_t task = zero;
+         ^
+src/task.c:351:10: style: The scope of the variable 'tasks' can be reduced. [variableScope]
+  Base_t tasks = zero;
+         ^
+src/task.c:757:11: style: The scope of the variable 'least' can be reduced. [variableScope]
+  Ticks_t least = -1;
+          ^
+src/timer.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 62 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+test/src/harness/loopback.c:28:10: error: There is an unknown macro here somewhere. Configuration is required. If TO_FUNCTION is a macro then please configure it. [unknownMacro]
+Return_t TO_FUNCTION(DEVICE_NAME, _self_register)(void) {
+         ^
+test/src/harness/memory_1_harness.c:46:9: style: Variable 'i' is reassigned a value before the old one has been used. [redundantAssignment]
+  for(i = 0; i < 0x20u; i++) {
+        ^
+test/src/harness/memory_1_harness.c:42:5: note: i is assigned
+  i = zero;
+    ^
+test/src/harness/memory_1_harness.c:46:9: note: i is overwritten
+  for(i = 0; i < 0x20u; i++) {
+        ^
+src/port.c:24:0: style: The function 'SysTick_Handler' is never used. [unusedFunction]
+
+^
+src/device.c:42:0: style: The function '__RegisterDevice__' is never used. [unusedFunction]
+
+^
+test/src/unit/unit.c:135:0: style: The function 'unit_print' is never used. [unusedFunction]
+
+^
+src/device.c:484:0: style: The function 'xDeviceConfigDevice' is never used. [unusedFunction]
+
+^
+src/device.c:448:0: style: The function 'xDeviceInitDevice' is never used. [unusedFunction]
+
+^
+src/sys.c:84:0: style: The function 'xSystemGetSystemInfo' is never used. [unusedFunction]
+
+^
+src/sys.c:72:0: style: The function 'xSystemHalt' is never used. [unusedFunction]
+
+^
+src/sys.c:52:0: style: The function 'xSystemInit' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
